@@ -1210,7 +1210,7 @@ class TargetPixelFile(object):
         def animate(i):
             frame = i * step
             ax.images[0].set_data(self.hdu[1].data[column][self.quality_mask][frame])
-            ax.set_title(f"Frame {frame}")
+            ax.set_title(f"Frame {frame}, Candence: {self.cadenceno[frame]}")
             return ax.images
 
         plt.close(ax.figure)  # prevent figure from showing up in interactive mode
